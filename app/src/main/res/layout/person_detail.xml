@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/pd_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_icon_status_unknown" />
+
+    <TextView
+        android:id="@+id/pd_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:text="Joe Bloggs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toEndOf="@+id/pd_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pd_statusline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="8dp"
+        android:text="This is my status in musselburgh"
+        app:layout_constraintStart_toEndOf="@+id/pd_image"
+        app:layout_constraintTop_toBottomOf="@+id/pd_name" />
+
+    <LinearLayout
+        android:id="@+id/pd_ll_btn_1"
+        android:layout_width="@dimen/ibutton_width"
+        android:layout_height="@dimen/ibutton_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pd_image">
+
+        <ImageButton
+            android:id="@+id/pd_btn_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_email" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Email" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pd_ll_btn_2"
+        android:layout_width="@dimen/ibutton_width"
+        android:layout_height="@dimen/ibutton_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/pd_ll_btn_1"
+        app:layout_constraintTop_toBottomOf="@id/pd_image">
+
+        <ImageButton
+            android:id="@+id/pd_btn_jabber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_chat" />
+
+        <TextView
+            android:id="@+id/text_view_jabber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Jabber" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/pd_ll_btn_3"
+        android:layout_width="@dimen/ibutton_width"
+        android:layout_height="@dimen/ibutton_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/pd_ll_btn_2"
+        app:layout_constraintTop_toBottomOf="@id/pd_image">
+
+        <ImageButton
+            android:id="@+id/pd_btn_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_phone" />
+
+        <TextView
+            android:id="@+id/text_view_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Call" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/pd_jobtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Senior Bullshitter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pd_ll_btn_1" />
+
+    <TextView
+        android:id="@+id/pd_dot_cookie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="I really should set a statusline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pd_jobtitle" />
+
+</android.support.constraint.ConstraintLayout>

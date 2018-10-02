@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Actions">
+     <menu android:checkableBehavior="single">
+
+         <group android:id="@+id/grp1" android:checkableBehavior="single">
+         <item
+            android:id="@+id/status_signin"
+            android:icon="@drawable/img_satus_working"
+            android:title="Working" />
+         <item
+            android:id="@+id/status_outlunch"
+            android:icon="@drawable/icon_break"
+            android:title="On a Break" />
+         <item
+             android:id="@+id/status_out"
+             android:icon="@drawable/icon_sleep"
+             android:title="Sign out" />
+         <item
+             android:id="@+id/status_traveling"
+             android:icon="@drawable/icon_travel"
+             android:title="Traveling on business" />
+         <item
+             android:id="@+id/status_absent"
+             android:icon="@drawable/icon_out"
+             android:title="Sign off as absent" />
+         </group>
+        <group android:id="@+id/grp2" android:checkableBehavior="single">
+         <item
+             android:id="@+id/nav_list_all"
+             android:icon="@drawable/ic_menu_list"
+             android:title="Who Is In?" />
+        </group>
+
+     </menu>
+    </item>
+
+</menu>

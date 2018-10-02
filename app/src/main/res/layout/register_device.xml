@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Device"
+        android:layout_marginLeft="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        />
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="10dp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="341dp"
+        android:layout_height="88dp"
+        android:layout_marginLeft="20dp"
+        android:text="Please go to the register device page on the signing page and enter your Yubikey to generate a regiustration code.  Then please enter this code in the box below."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+         />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+       <EditText
+           android:id="@+id/registrationCode"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="40dp"
+           android:ems="6"
+           android:maxLength="6"
+           android:inputType="numberDecimal"
+           android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:text="Go!" />
+</LinearLayout>
+   </LinearLayout>
+
+    
+</android.support.constraint.ConstraintLayout>
