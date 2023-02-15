@@ -1,12 +1,11 @@
 package com.premiumlets.apps.signinapp;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +13,14 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONObject;
-
-import java.time.Clock;
-import java.time.Instant;
-import java.util.Date;
 
 /**
  * Created by steve on 2/22/18.
  */
 
-public class DaxtraNavigatorFragment extends android.support.v4.app.Fragment {
+public class DaxtraNavigatorFragment extends Fragment {
 
     static DaxtraNavigatorFragment theNavigator;
     public final static long CODE_TIMEOUT_MILLIS = 180000;

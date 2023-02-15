@@ -1,6 +1,5 @@
 package com.premiumlets.apps.signinapp;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,11 +11,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.fragment.app.Fragment;
+
 /**
  * Created by steve on 2/23/18.
  */
 
-public class DaxtraRegistrationFragment extends android.support.v4.app.Fragment {
+public class DaxtraRegistrationFragment extends Fragment {
 
     public void onCreate() {
 

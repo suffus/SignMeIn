@@ -1,9 +1,7 @@
 package com.premiumlets.apps.signinapp;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Base64;
 import android.widget.Toast;
 
@@ -42,7 +40,7 @@ public class DaxtraKeysModel {
     private Exception mServiceException = null;
     private String mDeviceName;
     private String mUserName;
-    private static String apiServer="http://xtr1.daxtra.com/token/";
+    private static String apiServer="https://auth0.daxtra.com/token/";
 
 
 
@@ -179,7 +177,7 @@ public class DaxtraKeysModel {
 
     public void getCode( ) {
         // first verify the device
-        performVerifiedCall( "http://xtr1.daxtra.com/token/api?a=code&domain=daxtra",
+        performVerifiedCall( "https://auth0.daxtra.com/token/api?a=code&domain=daxtra",
                 new Downloader() {
                     @Override
                     public void onPostExecute( String result ) {
@@ -233,7 +231,7 @@ public class DaxtraKeysModel {
                     String call_url = url;
                     JSONObject j0 = new JSONObject(result);
                     String v_code = j0.optString("verification_code");
-                    Signature signature = Signature.getInstance("SHA1withRSA", "BC");
+                    Signature signature = Signature.getInstance("SHA1withRSA");
                     signature.initSign(mDeviceKeyPair.getPrivate(), new SecureRandom());
                     byte[] message = v_code.getBytes();
                     signature.update(message);
@@ -252,7 +250,7 @@ public class DaxtraKeysModel {
                     return;
                 }
             }
-        }.execute( "http://xtr1.daxtra.com/token/verify_device?domain=daxtra&key=" + getDeviceName() );
+        }.execute( "https://auth0.daxtra.com/token/verify_device?domain=daxtra&key=" + getDeviceName() );
     }
 
     public void getUserData( ) {
@@ -295,7 +293,7 @@ public class DaxtraKeysModel {
 
 
     public void callJSONAPI( final int eventResult, String method, Map<String, String> params ) {
-        String apiCall = "http://xtr1.daxtra.com/token/api?domain=daxtra&a="+method;
+        String apiCall = "https://auth0.daxtra.com/token/api?domain=daxtra&a="+method;
         if( params != null ) {
             for( String param : params.keySet() ) {
                 try {
